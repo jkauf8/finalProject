@@ -7,7 +7,7 @@ package elevens;
 import static java.lang.System.*;
 
 public class DeckRunner
-{
+{ 
 	public static void main( String args[] )
 	{
 		Deck test = new Deck();
