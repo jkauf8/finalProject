@@ -51,7 +51,7 @@ public class MonsterRunner
                     System.out.println("Monster one has the same name as Monster two");
                 }
                 else{
-                    System.out.println("Monster one doesn't have the same name as Monster two");
+                    System.out.println("Monster one does not have the same name as Monster two");
                 }
                 
 	}

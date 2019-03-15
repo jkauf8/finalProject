@@ -54,10 +54,10 @@ public class Skeleton implements Monster
 	public boolean namesTheSame(Monster other){
             boolean same;
             if(name.toUpperCase().equals(other.getName().toUpperCase())){
-                same = true;
+                same =true;
             }
             else{
-                same = false;
+                same =false;
             }
             return same;
         }
