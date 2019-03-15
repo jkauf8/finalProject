@@ -15,9 +15,9 @@ public class MonsterRunner
 		
                 
 		//ask for name and size
-                System.out.print("Enter 1st monster's name: ");
+                System.out.print("Enter the 1st monster's name: ");
                 String name1 = keyboard.nextLine();
-                System.out.print("Enter 1st monster's size: ");
+                System.out.print("Enter the 1st monster's size: ");
                 int size1 = keyboard.nextInt();
                 keyboard.nextLine();
 		
@@ -25,11 +25,14 @@ public class MonsterRunner
                 Skeleton monster1 = new Skeleton(name1, size1);
 		
 		//ask for name and size
-                System.out.print("Enter 2nd monster's name: ");
+                System.out.print("Enter the 2nd monster's name: ");
                 String name2 = keyboard.nextLine();
-                System.out.print("Enter 2nd monster's size: ");
+                System.out.print("Enter the 2nd monster's size: ");
                 int size2 = keyboard.nextInt();
                 keyboard.nextLine();
+                
+                System.out.println(" Monster 1 - " + name1 + " "+ size1);
+                System.out.println(" Monster 2 - " + name2 + " "+ size2);
 		
 		//instantiate monster two
                 Skeleton monster2 = new Skeleton(name2, size2);
