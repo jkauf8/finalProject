@@ -14,14 +14,14 @@ public class WordRunner
         Scanner file = new Scanner(new File("src/Word/words.dat"));
         int size = file.nextInt();
         
-        Word[] arr = new Word[size];
+        Word[] array = new Word[size];
         for(int i = 0; i < size; i++){
-            arr[i] = new Word(file.nextLine());
+            array[i] = new Word(file.nextLine());
         }
         
-        Arrays.sort(arr);
+        Arrays.sort(array);
         
-        for(Word w: arr)
+        for(Word w: array)
             System.out.println(w.toString());
 	}
 }
