@@ -14,10 +14,9 @@ public class GridRunner
 	public static void main( String args[] ) throws IOException
 	{
             String[] array = {"1","3","5","a","b","c"};
-            Grid grid = new Grid(2, 1, array);
+            Grid grid = new Grid(5, 10, array);
         
             System.out.println(grid.toString());
-            System.out.println("\n");
             System.out.println(grid.findMax(array) + " occurs the most");
 
 	}

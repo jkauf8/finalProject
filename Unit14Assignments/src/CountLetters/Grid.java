@@ -23,8 +23,9 @@ public class Grid
 	public String findMax(String[] vals)
 	{
             String maxString = "";
-            int maxCount = 0;
+            int maxCount = 0; 
             for(String s : vals){
+               System.out.println(s+" count is "+countVals(s));
                 if(maxCount<countVals(s)){
                     maxCount = countVals(s);
                     maxString = s;
