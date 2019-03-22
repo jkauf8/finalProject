@@ -11,7 +11,7 @@ public class TotalRow
     public static List<Integer> getRowTotals( int[][] m )
     {
     	//add code here
-        List <Integer> answer = new ArrayList<>();
+        ArrayList <Integer> answer = new ArrayList<>();
         for (int [] array : m){
             int sum = 0;
             for (int i :array){
