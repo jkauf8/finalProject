@@ -11,11 +11,11 @@ import blackjack.Card;
 public abstract class AbstractPlayer implements Playerable {
 
     private ArrayList<Card> hand;
-    private int winCount;
+    private int wins;
 
     public AbstractPlayer(){
         hand = new ArrayList<Card>();
-        winCount = 0;
+        wins = 0;
     }
     
     public void addCardToHand(Card temp) {
@@ -25,13 +25,13 @@ public abstract class AbstractPlayer implements Playerable {
     public void resetHand() {
         hand.clear();
     }
-
+    
     public void setWinCount(int numwins) {
-        winCount = numwins;
+        wins = numwins;
     }
 
     public int getWinCount() {
-        return winCount;
+        return wins;
     }
 
     public int getHandSize() {
@@ -46,6 +46,6 @@ public abstract class AbstractPlayer implements Playerable {
         return total;
     }
     public String toString() {
-        return "hand = " + hand.toString() + " \n-  # wins " + winCount;
+        return "hand = " + hand.toString() + " \n-  # wins " + wins;
     }
 }
