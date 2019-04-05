@@ -40,7 +40,7 @@ public class BlackJack {
         System.out.print("Do you want to hit? [Y/N]: ");
         boolean playerHit = play.hit();
 
-        while (playerTotal <= 21 && playerHit) {
+        while (playerTotal <= 21&& playerHit) {
             play.addCardToHand(deal.deal());
             playerTotal = play.getHandValue();
             System.out.println("Total: " + playerTotal);
@@ -63,24 +63,24 @@ public class BlackJack {
         }
         if (playerTotal <= 21){
             if(dealerTotal > 21){
-                System.out.println("\nPlayer wins - Dealer busted!");
+                System.out.println("Player wins - Dealer has busted!");
             }
             else {
-                System.out.println("\nPlayer wins!");
+                System.out.println("Player wins!");
             }
         }
         if(dealerTotal <= 21){
             if(playerTotal > 21){
-                System.out.println("\nDealer wins - Player busted!");
+                System.out.println("Dealer wins - Player has busted!");
             }
             else {
-                System.out.println("\nDealer wins!");
+                System.out.println("Dealer wins!");
             }
         }
 
-        System.out.println("\nPlayer: "+ playerTotal + " and Dealer:" + dealerTotal + "\n");
+        System.out.println("Player: "+ playerTotal + " and Dealer:" + dealerTotal + "\n");
 
-        System.out.println("\nDo you want to play again? [Y/N] ");
+        System.out.println("Do you want to play again? [Y/N] ");
 
         answer = keyboard.next();
 

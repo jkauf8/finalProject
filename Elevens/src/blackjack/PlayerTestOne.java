@@ -36,4 +36,4 @@ public class PlayerTestOne
 		out.println("\n\nhandValue");
 		out.println(player.getHandValue());									
 	}
-}
+} 

@@ -7,7 +7,7 @@ package blackjack;
 //Lab  - 
 
 public interface Playerable
-{
+{ 
    public void addCardToHand( Card temp );
 
    public void resetHand();

@@ -26,7 +26,7 @@ public class Dealer extends AbstractPlayer {
      public Card deal() {
         return deck.nextCard();
     }
-
+ 
 	//hit method goes here
     public boolean hit() {
         return (super.getHandValue()<17) && (super.getHandValue()<= 21);

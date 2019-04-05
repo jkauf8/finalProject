@@ -66,7 +66,7 @@ public abstract class Card {
         return obj.getSuit().equals(this.getSuit())
             && obj.getFace()==this.getFace()
             && obj.getPointValue() == this.getPointValue();
-    }
+    } 
     //toString
     public String toString() {
         return face + " of " + getSuit() + " | value = " + getValue();
