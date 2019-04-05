@@ -11,25 +11,25 @@ public class BlackJackCard extends Card {
     public BlackJackCard(){
         super();
     }
-    public BlackJackCard(String s, String f, int val){
-        super(s, f, val);
+    public BlackJackCard(String s, String f, int value){
+        super(s, f, value);
     }
     
-    public BlackJackCard(int val, String s){
-        super(val, s);
+    public BlackJackCard(int value, String s){
+        super(value, s);
     }
     public int getValue() {
-        int val;
+        int value;
         
         if(super.getPointValue() == 1){
-            val = 11;
+            value = 11;
         }
-        else if (super.getPointValue() < 10) {
-            val = super.getPointValue();
+        else if (super.getPointValue()< 10) {
+            value = super.getPointValue();
         }
         else {
-            val = 10;
+            value = 10;
         }
-        return val;
+        return value;
     }
 }
