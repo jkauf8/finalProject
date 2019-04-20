@@ -74,7 +74,6 @@ public class Block implements Locatable {
     public int getY() {
         return yPos;
     }
-
     /**
      * @param yPos the yPos to set
      */
@@ -88,7 +87,6 @@ public class Block implements Locatable {
     public int getWidth() {
         return width;
     }
-
     /**
      * @param width the width to set
      */
@@ -123,8 +121,6 @@ public class Block implements Locatable {
     public void setColor(Color col) {
         this.color = col;
     }
-    
-
     public void draw(Graphics window) {
         //uncomment after you write the set and get methods
         window.setColor(getColor());
