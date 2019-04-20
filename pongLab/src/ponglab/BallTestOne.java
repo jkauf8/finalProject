@@ -7,7 +7,7 @@ import static java.lang.System.*;
 import java.awt.Color;
 
 class BallTestOne {
-
+    
     public static void main(String args[]) {
         Ball one = new Ball();
         out.println(one);
@@ -29,7 +29,7 @@ class BallTestOne {
         out.println(six);
 
         out.println(five.equals(four));
-
+        
         out.println(five.equals(five));
     }
 }

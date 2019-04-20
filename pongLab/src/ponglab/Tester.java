@@ -1,37 +1,32 @@
 package ponglab;
+
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
- 
+
 import javax.swing.JFrame;
 import java.awt.Component;
 
-public class Tester extends JFrame
-{
-	private static final int WIDTH = 800;
-	private static final int HEIGHT = 600;
+public class Tester extends JFrame {
 
-	public Tester()
-	{
-		super("PONG TESTER");
-		setSize(WIDTH,HEIGHT);
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 600;
 
-		getContentPane().add(new BlockTestTwo());
+    public Tester() {
+        super("PONG TESTER");
+        setSize(WIDTH, HEIGHT);
+        //uncomment when you are ready to test the Ball
+        BallTestTwo ballTest = new BallTestTwo();
+        getContentPane().add(ballTest);
+        PaddleTestTwo padTest = new PaddleTestTwo();
+        ((Component)padTest).setFocusable(true);
+        getContentPane().add(padTest);
+        setVisible(true);
 
-		//uncomment when you are ready to test the Ball
-		getContentPane().add(new BallTestTwo());
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
 
-		//PaddleTestTwo padTest = new PaddleTestTwo();
-		//((Component)padTest).setFocusable(true);
-		//getContentPane().add(padTest);
-
-		setVisible(true);
-
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
-
-	public static void main( String args[] )
-	{
-		Tester run = new Tester();
-	}
+    public static void main(String args[]) {
+        Tester run = new Tester();
+    }
 }

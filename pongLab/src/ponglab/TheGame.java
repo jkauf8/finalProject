@@ -1,4 +1,5 @@
 package ponglab;
+
 //(c) A+ Computer Science
 //www.apluscompsci.com
 //Name -
@@ -6,28 +7,26 @@ package ponglab;
 import javax.swing.JFrame;
 import java.awt.Component;
 
-public class TheGame extends JFrame
-{
-	private static final int WIDTH = 800;
-	private static final int HEIGHT = 600;
+public class TheGame extends JFrame {
 
-	public TheGame()
-	{
-		super("PONG");
-		setSize(WIDTH,HEIGHT);
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 600;
 
-		Pong game = new Pong();
+    public TheGame() {
+        super("PONG");
+        setSize(WIDTH, HEIGHT);
 
-		((Component)game).setFocusable(true);
-		getContentPane().add(game);
+        Pong game = new Pong();
 
-		setVisible(true);
+        ((Component) game).setFocusable(true);
+        getContentPane().add(game);
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
+        setVisible(true);
 
-	public static void main( String args[] )
-	{
-		TheGame run = new TheGame();
-	}
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public static void main(String args[]) {
+        TheGame run = new TheGame();
+    }
 }

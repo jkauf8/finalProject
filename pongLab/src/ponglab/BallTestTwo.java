@@ -28,7 +28,7 @@ class BallTestTwo extends Canvas implements Runnable {
         
         new Thread(this).start();
     }
-
+    
     public void update(Graphics window) {
         paint(window);
     }
