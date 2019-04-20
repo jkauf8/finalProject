@@ -5,6 +5,7 @@ package ponglab;
 //Name -
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.Objects;
 
 public class Block implements Locatable {
 
@@ -134,19 +135,26 @@ public class Block implements Locatable {
         window.setColor(col);
         window.fillRect(getX(), getY(), getWidth(), getHeight());
     }
-
+    @Override
     public boolean equals(Object obj) {
         Block temp = (Block) obj;
-        if(this.getColor() != null && temp.getColor() != null){
-            if( this.getX() == temp.getX() && this.getY() == temp.getY() && 
-                    this.getWidth() == temp.getWidth() && this.getHeight() == temp.getHeight() && 
-                    this.getColor().equals(temp.getColor())){
-                return true;
-            }
-        }
-        return false;
+        return (this.getColor()!= null && temp.getColor() != null) &&
+        (this.getX() == temp.getX() && this.getY() == temp.getY() && this.getWidth() 
+        == temp.getWidth() && this.getHeight() == temp.getHeight() &&this.getColor().equals(temp.getColor()));
     }
+    
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 31 * hash + this.xPos;
+        hash = 31 * hash + this.yPos;
+        hash = 31 * hash + this.width;
+        hash = 31 * hash + this.height;
+        hash = 31 * hash + Objects.hashCode(this.color);
+        return hash;
+        
+    }
     //add a toString() method  - x , y , width, height, color
     public String toString(){
         return this.xPos + " " + this.yPos + " " + this.width + " " + this.height + " " + this.color;

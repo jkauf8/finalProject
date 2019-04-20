@@ -75,7 +75,7 @@ public class Paddle extends Block {
     public void setSpeed(int speed) {
         this.speed = speed;
     }
-    
+    @Override
     public String toString(){
         return getX() + " " + getY() + " " + getWidth() + " " + getHeight() + " " + getColor() + " " + getSpeed();
     }
