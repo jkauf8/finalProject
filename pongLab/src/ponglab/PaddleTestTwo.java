@@ -17,6 +17,7 @@ import java.awt.event.ActionListener;
 
 public class PaddleTestTwo extends Canvas implements KeyListener, Runnable {
 
+    
     private Ball ball;
     private Paddle leftPaddle;
     private Paddle rightPaddle;
@@ -28,14 +29,12 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable {
         
         //instantiate a Ball
         
-        ball = new Ball();
-
-        
+        ball = new Ball(200,200,30,30, Color.RED, 3,2);
         //instantiate a left Paddle
-        leftPaddle = new Paddle(50, 150, 10, 50);
+        leftPaddle = new Paddle(50, 300, 5, 80, Color.BLUE);
         //instantiate a right Paddle
-        
-        rightPaddle = new Paddle(500, 150, 10, 50);
+        rightPaddle = new Paddle(750, 300, 5, 80, Color.BLUE);        
+     
         keys = new boolean[5];
 
         
