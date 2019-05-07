@@ -397,6 +397,34 @@ public class Picture extends SimplePicture {
             }
         }
     }
+    public void blur(int x, int y, int w, int h ){
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel onePixel = null;
+        int blurRed=0;
+        int blurBlue=0;
+        int blurGreen=0;
+        for (int col =x; col < x+w; col++){
+            for (int row = y; row <y+h; row ++){
+                onePixel =pixels[row][col];
+                blurRed=(pixels[row][col].getRed()+pixels[row][col+1].getRed()+pixels[row][col-1].getRed()+
+                        pixels[row+1][col].getRed() + pixels[row-1][col].getRed()+pixels[row+1][col+1].getRed() +
+                        pixels[row-1][col-1].getRed()+ pixels[row+1][col-1].getRed()+pixels[row-1][col+1].getRed())/9;
+                blurBlue=(pixels[row][col].getBlue()+pixels[row][col+1].getBlue()+pixels[row][col-1].getBlue()+
+                        pixels[row+1][col].getBlue() + pixels[row-1][col].getBlue()+pixels[row+1][col+1].getBlue() +
+                        pixels[row-1][col-1].getBlue()+ pixels[row+1][col-1].getBlue()+pixels[row-1][col+1].getBlue())/9;
+                blurGreen=(pixels[row][col].getGreen()+pixels[row][col+1].getGreen()+pixels[row][col-1].getGreen()+
+                        pixels[row+1][col].getGreen() + pixels[row-1][col].getGreen()+pixels[row+1][col+1].getGreen() +
+                        pixels[row-1][col-1].getGreen()+ pixels[row+1][col-1].getGreen()+pixels[row-1][col+1].getGreen())/9;
+
+                onePixel.setRed(blurRed);
+                onePixel.setBlue(blurBlue);
+                onePixel.setGreen(blurGreen);
+                
+            }
+            
+        }
+        
+    }
     /* Main method for testing - each class in Java can have a main 
    * method 
      */

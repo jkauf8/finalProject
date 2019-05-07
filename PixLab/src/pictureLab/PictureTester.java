@@ -12,6 +12,14 @@ public class PictureTester {
     /**
      * Method to test zeroBlue
      */
+    public static void testBlur(int x, int y, int w, int h, int n){
+        Picture redMoto = new Picture("redMotorcycle.jpg");
+        for (int i = 0; i < n; i++) {
+            redMoto.blur(x, y, w, h);  
+        }
+        redMoto.explore();
+    }
+
     public static void testZeroBlue() {
         Picture beach = new Picture("beach.jpg");
         beach.explore();
@@ -94,6 +102,7 @@ public class PictureTester {
         temple.mirrorArms();
         temple.explore();
     }
+
     public static void testMirrorDiagonal() {
         Picture temple = new Picture("beach.jpg");
         temple.explore();
@@ -107,6 +116,7 @@ public class PictureTester {
         temple.mirrorGull();
         temple.explore();
     }
+
     public static void testCopyTwo() {
         Picture first = new Picture("seagull.jpg");
         Picture second = new Picture("snowman.jpg");
@@ -114,12 +124,7 @@ public class PictureTester {
         first.copyTwo(second, 78, 298, 102, 295, 170, 387);
         first.explore();
     }
-    public static void testMyCollage() {
-        Picture first = new Picture("seagull.jpg");
-        first.explore();
-        first.myCollage();
-        first.explore();
-    }
+
     /**
      * Method to test the collage method
      */
@@ -127,6 +132,13 @@ public class PictureTester {
         Picture canvas = new Picture("640x480.jpg");
         canvas.createCollage();
         canvas.explore();
+    }
+
+    public static void testMyCollage() {
+        Picture first = new Picture("seagull.jpg");
+        first.explore();
+        first.myCollage();
+        first.explore();
     }
 
     /**
@@ -144,6 +156,7 @@ public class PictureTester {
         robot.edgeDetectionTwo(10);
         robot.explore();
     }
+
     /**
      * Main method for testing. Every class can have a main method in Java
      */
@@ -177,5 +190,6 @@ public class PictureTester {
         //testSetRedToHalfValueInTopHalf();
         //testClearBlueOverValue(200);
         //testGetAverageForColumn(0);
+        testBlur(194,171,25,25,10); 
     }
 }
