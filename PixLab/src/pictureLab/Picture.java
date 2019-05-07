@@ -400,7 +400,7 @@ public class Picture extends SimplePicture {
     public void blur(int x, int y, int w, int h ){
         Pixel[][] pixels = this.getPixels2D();
         Pixel onePixel = null;
-        int blurRed=0;
+        int blurRed=0; 
         int blurBlue=0;
         int blurGreen=0;
         for (int col =x; col < x+w; col++){
