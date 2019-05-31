@@ -20,8 +20,14 @@ public class game extends JFrame
 
 	public game()
 	{
-                setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(true);
+            setSize(WIDTH, HEIGHT);
+
+            field game = new field();
+            ((Component) game).setFocusable(true);
+            getContentPane().add(game);
+            
+            setDefaultCloseOperation(EXIT_ON_CLOSE);
+            setVisible(true);
 	}
 
 	public static void main( String args[] )

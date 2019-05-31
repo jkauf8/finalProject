@@ -31,6 +31,7 @@ public class ammo extends movingObject
             super(x,y,w,h);
 	}
 
+
 	public ammo(int x, int y, int w, int h, int xs, int ys)
 	{
             super(x,y,w,h,xs,ys);
@@ -62,15 +63,18 @@ public class ammo extends movingObject
 
 	public void draw( Graphics window )
 	{
-            window.setColor(Color.YELLOW);
+            window.setColor(Color.BLUE);
             window.fillRect(getX(), getY(), 8, 8);
 	}
 	
 	
 	public void move( String direction )
 	{
-            if(direction.equals("UP")){
-               setY(getY()-getYSpeed());
+            if(direction.equals("LEFT")){
+               setX(getX()-getXSpeed());
+            }
+            if(direction.equals("RIGHT")){
+               setX(getX()+getXSpeed());
             }
 	}
 

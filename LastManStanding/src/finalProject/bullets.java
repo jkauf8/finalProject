@@ -16,8 +16,8 @@ import java.util.Arrays;
 public class bullets {
         private List<ammo> ammo;
 	private boolean bulletCheck = true;
-        private int tickSpacer = 65;
-        private int tick;
+        private int spacerl = 20;
+        private int spacer;
         
         
         public bullets()
@@ -34,23 +34,29 @@ public class bullets {
             
 	}
 
-	//post - draw each Ammo
-	public void drawEmAll( Graphics window )
+	public void drawBullets( Graphics window )
 	{
             for (int i =0; i<ammo.size(); i++){
                 ammo.get(i).draw(window);
             }
 	}
 
-	public void moveEmAll()
+	public void shootBulletsRight()
 	{
             for (int i = 0; i < ammo.size(); i++) {
-		ammo.get(i).move("UP");
+		ammo.get(i).move("RIGHT");
+            }
+            
+	}
+        public void shootBulletsLeft()
+	{
+            for (int i = 0; i < ammo.size(); i++) {
+		ammo.get(i).move("LEFT");
             }
             
 	}
 
-	public void cleanEmUp()
+	public void rem()
 	{
             for (int i = 0; i < ammo.size(); i++) {
 		if (ammo.get(i).getY() < 0) {
@@ -59,9 +65,9 @@ public class bullets {
 		}
             }
 	}
-        public void setTickSpacer(int i )
+        public void spacerl(int i )
 	{
-		tickSpacer= i;
+		spacerl= i;
 	}
 
 	public List<ammo> getList()
@@ -69,10 +75,10 @@ public class bullets {
 		return ammo;
 	}
         public void bulletSpacer() {
-		tick++;
-		if (tick >= tickSpacer) {
+		spacer++;
+		if (spacer >= spacerl) {
 			bulletCheck = true;
-			tick = 0;
+			spacer = 0;
 		}
 	}
 

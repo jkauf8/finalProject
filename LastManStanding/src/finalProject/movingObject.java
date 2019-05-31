@@ -5,12 +5,16 @@
  */
 package finalProject;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 /**
  *
  * @author justinkaufman
  */
 public class movingObject {
     int xPos, yPos, width, height, xSpd, ySpd;
+    private Color color;
     
     public movingObject(int x, int y, int w, int h){
     
@@ -84,4 +88,31 @@ public class movingObject {
         {
             return ySpd;
         }
+    public void draw(Graphics window) {
+        window.setColor(color);
+        window.fillRect(getX(), getY(), getWidth(), getHeight());
+    }
+    public boolean isHit(movingObject hit)
+	{
+            if(getBounds().hitPlayer(hit.getBounds())){
+                return true;	
+            }
+            return false;
+		
+	}
+        
+     public bounds getBounds()
+        {
+            return new bounds(getX(), getY(), getWidth());
+	}
+
+    public void draw(Graphics window, Color col) {
+        window.setColor(col);
+        window.fillRect(getX(), getY(), getWidth(), getHeight());
+    }
+
+    public String toString()
+    {
+	return getX() + " " + getY() + " " + getWidth() + " " + getHeight()+ " "+ getxSpd()+ " " + getySpd();
+    }
 }
