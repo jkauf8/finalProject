@@ -5,6 +5,8 @@
  */
 package finalProject;
 
+import java.awt.Component;
+
 /**
  *
  * @author justinkaufman
@@ -56,6 +58,11 @@ public class NewJFrame extends javax.swing.JFrame {
         newTitleLbl.setText("Enter Player1 Name");
 
         beginGameBtn.setText("Start");
+        beginGameBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                beginGameBtnActionPerformed(evt);
+            }
+        });
 
         jTextField1.setFont(new java.awt.Font("Lucida Grande", 0, 8)); // NOI18N
         jTextField1.setText("~enter names, update title, then start game");
@@ -166,16 +173,20 @@ public class NewJFrame extends javax.swing.JFrame {
         String otherTitle = player2Txt.getText();
         mainTitleLbl.setText(newTitle +" vs. " +otherTitle+"!");
     }//GEN-LAST:event_updateBtnActionPerformed
-
+    private void CloseFrame(){
+        super.dispose();
+    }
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-        
+        // TODO add your handling code here:    
     }//GEN-LAST:event_jTextField1ActionPerformed
-    private void beginGameBtnActionPerformed(java.awt.event.ActionEvent evt) {                                            
+
+    private void beginGameBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_beginGameBtnActionPerformed
         // TODO add your handling code here:
-        
-        
-    }                                           
+        CloseFrame();
+        game run = new game();
+        new game().setVisible(true);
+    }//GEN-LAST:event_beginGameBtnActionPerformed
+                                   
     /**
      * @param args the command line arguments
      */

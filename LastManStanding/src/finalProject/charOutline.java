@@ -9,18 +9,18 @@ package finalProject;
  *
  * @author justinkaufman
  */
-public class bounds {
+public class charOutline {
     private double x;
     private double y;
     private double size;
 	
-    public bounds(double x, double y, double size)
+    public charOutline(double x, double y, double size)
     {
 	this.x = x;
 	this.y = y;
 	this.size = size;
     }
-    public boolean hitPlayer(bounds hit)
+    public boolean hitPlayer(charOutline hit)
     {
 	double xD = this.getX() +this.getSize()/2 - hit.getX() - hit.getSize()/2;
 	double yD = this.getY() +this.getSize()/2 - hit.getY() - hit.getSize()/2;
@@ -39,3 +39,4 @@ public class bounds {
         return size;
     }
 }
+

@@ -101,9 +101,9 @@ public class movingObject {
 		
 	}
         
-     public bounds getBounds()
+     public charOutline getBounds()
         {
-            return new bounds(getX(), getY(), getWidth());
+            return new charOutline(getX(), getY(), getWidth());
 	}
 
     public void draw(Graphics window, Color col) {

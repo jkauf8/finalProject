@@ -143,11 +143,19 @@ public class field extends Canvas implements KeyListener, Runnable
             shotsR.bulletSpacer();
             shotsL.bulletSpacer();
             if (Player1.bulletGone(shotsL.getList())){
-                player1Score++;
+                if (player2Score<5){
+                player2Score++;}
             };
             if(Player2.bulletGone(shotsR.getList())){
-                player2Score++;
+                if (player1Score<5){
+                player1Score++;}
             };
+            if (player1Score==5){
+                graphToBack.drawString("Player 1 Wins!", 350,250);
+            }
+            else if (player2Score==5){
+                graphToBack.drawString("Player 2 Wins!", 350,250);
+            }
             twoDGraph.drawImage(back, null, 0, 0);
 	}
         public void keyPressed(KeyEvent e)
