@@ -13,7 +13,7 @@ import java.util.Arrays;
  *
  * @author justinkaufman
  */
-public class bullets {
+public class bullets { //similar to bullets class in starfighter
         private List<ammo> ammo;
 	private boolean bulletCheck = true;
         private int spacerl = 20;

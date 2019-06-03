@@ -16,7 +16,7 @@ import java.io.File;
 import javax.imageio.ImageIO;
 
 public class ammo extends movingObject
-{
+{ //similar to ammo class in starfighter
 	private int yspeed;
         private int xspeed;
         private double speed;
